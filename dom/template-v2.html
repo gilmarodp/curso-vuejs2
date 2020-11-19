@@ -1,0 +1,25 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ titulo }}</p>
+    <p>{{ saudacao() }}</p>
+</div>
+
+<script>
+    /*
+     * Tudo que há dentro da instância Vue() pode ser acessado no HTML
+     * sem que seja necessário guardar a instância para depois obter
+     * os atributos que a ela pertecem.
+     */
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS'
+        },
+        methods: {
+            saudacao: function() {
+                return 'Boa semana!'
+            }
+        },
+    })
+</script>
